@@ -142,6 +142,8 @@ public class DarkRoom extends GraphicsProgram {
 				
 				setImage(newImage);
 				infoLabel.setText(command + " filter applied.");
+			} else {
+				showErrorPopup("Select an area to crop");
 			}
 		} else if (command.equals("Scale")) {
 			double scaleFactor = readDoubleFromUser("Enter the scale factor");
