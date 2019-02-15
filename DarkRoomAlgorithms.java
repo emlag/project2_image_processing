@@ -98,8 +98,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	}
 
 	private void equalizeImage(int[][] array, int[] cumulativeHistogram) {
-		// Replace each luminosity value with 255 * cumulative histogram[L] / total #
-		// pixels
 		for (int row = 0; row < array.length; row++) {
 			for (int col = 0; col < array[0].length; col++) {
 					int pixel = array[row][col];
