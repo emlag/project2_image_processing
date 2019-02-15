@@ -16,7 +16,7 @@
 import acm.graphics.GImage;
 import acm.graphics.GMath;
 
-public interface ImageShopAlgorithmsInterface {
+public interface DarkRoomAlgorithmsInterface {
 	
 	/**********************************************************
 	 *                       Starter Code                     *
