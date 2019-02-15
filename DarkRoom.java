@@ -144,7 +144,7 @@ public class DarkRoom extends GraphicsProgram {
 				infoLabel.setText(command + " filter applied.");
 			}
 		} else if (command.equals("Scale")) {
-			// TODO
+			
 		} else {
 			infoLabel.setText("Unknown command " + command + ".");
 		}
@@ -218,11 +218,11 @@ public class DarkRoom extends GraphicsProgram {
 	 * Pops up dialog boxes asking the user to type an integer repeatedly until
 	 * the user types a valid integer.
 	 */
-	private int readInteger(String prompt) {
+	private double readDouble(String prompt) {
 		while (true) {
 			try {
 				String result = JOptionPane.showInputDialog(prompt);
-				int num = Integer.parseInt(result);
+				int num = Douvle.parseDouble(result);
 				return num;
 			} catch (NumberFormatException e) {
 				// empty; re-prompt
