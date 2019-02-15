@@ -144,7 +144,7 @@ public class DarkRoom extends GraphicsProgram {
 				infoLabel.setText(command + " filter applied.");
 			}
 		} else if (command.equals("Scale")) {
-			double scaleFactor = readDouble("Enter the scale factor");
+			double scaleFactor = readDoubleFromUser("Enter the scale factor");
 			GImage newImage = algorithms.scale(currentImage, scaleFactor);
 			setImage(newImage);
 			infoLabel.setText(command + " filter applied.");	
@@ -222,7 +222,7 @@ public class DarkRoom extends GraphicsProgram {
 	 * Pops up dialog boxes asking the user to type an integer repeatedly until
 	 * the user types a valid integer.
 	 */
-	private double readDouble(String prompt) {
+	private double readDoubleFromUser(String prompt) {
 		while (true) {
 			try {
 				String result = JOptionPane.showInputDialog(prompt);
