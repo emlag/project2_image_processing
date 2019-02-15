@@ -44,16 +44,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return null;
 	}
 
-	public GImage translate(GImage source, int dx, int dy) {
-		// TODO
-		return null;
-	}
-
-	public GImage blur(GImage source) {
-		// TODO
-		return null;
-	}
-
 	public GImage crop(GImage source, int cropX, int cropY, int cropWidth, int cropHeight) {
 		// TODO
 		return null;
