@@ -9,7 +9,6 @@
 
 // TODO: comment this file explaining its behavior
 
-import java.util.*;
 import acm.graphics.*;
 
 public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
