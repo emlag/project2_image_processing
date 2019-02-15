@@ -103,6 +103,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 				newPixelArray[r][c] = color;
 			}
 		}
-		source.setPixelArray(newPixelArray);
+		return new GImage(newPixelArray));
 	}
 }
