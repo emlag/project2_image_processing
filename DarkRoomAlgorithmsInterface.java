@@ -38,7 +38,7 @@ public interface DarkRoomAlgorithmsInterface {
 	public GImage equalize(GImage source);
 	public GImage negative(GImage source);
 	public GImage crop(GImage source, int cropX, int cropY, int cropWidth, int cropHeight);
-	public GImage scale(GImage source, double scatterRadius);
+	public GImage scale(GImage source, double scaleFactor);
 	public GImage translate(GImage source, int dx, int dy);
 	public GImage blur(GImage source);
 	
