@@ -60,6 +60,30 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		
 		return new GImage(pixelArray);
 	}
+	
+	private int[] computeHistogram(int[][] pixels) {
+		int height = pixels.length;
+		int width = pixels[0].length;
+
+		int[] histogram = new int[256];
+
+		// Fill in the histogram using all the pixel's luminosities
+		for (int row = 0; row < height; row++) {
+			for (int col = 0; col < width; col++) {
+				if (isPixelSelected(row, col)) {
+					int pixel = pixels[row][col];
+					int red = GImage.getRed(pixel);
+					int green = GImage.getGreen(pixel);
+					int blue = GImage.getBlue(pixel);
+					int luminosity = computeLuminosity(red, green, blue);
+
+					histogram[luminosity]++;
+				}
+			}
+		}
+
+		return histogram;
+	}
 
 	public GImage negative(GImage source) {
 		int[][] pixelArray = source.getPixelArray();  
