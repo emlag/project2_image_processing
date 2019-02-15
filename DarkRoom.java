@@ -1,5 +1,5 @@
 /*
- * CS 106A ImageShop
+ * CS 106A DarkRoom
  *
  * This instructor-provided file implements the graphical user interface (GUI)
  * for the ImageShop program and allows you to test the behavior of your image algorithms.
