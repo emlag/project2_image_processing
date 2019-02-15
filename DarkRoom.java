@@ -133,8 +133,7 @@ public class DarkRoom extends GraphicsProgram {
 			// TODO
 		} else if (command.equals("Scale")) {
 			// TODO
-		}
-		else {
+		} else {
 			infoLabel.setText("Unknown command " + command + ".");
 		}
 	}
