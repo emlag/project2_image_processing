@@ -103,6 +103,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 				newPixelArray[r][c] = color;
 			}
 		}
-		return new GImage(newPixelArray));
+		return new GImage(newPixelArray);
 	}
 }
