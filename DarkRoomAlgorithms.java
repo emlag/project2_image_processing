@@ -48,9 +48,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	}
 
 	public GImage greenScreen(GImage source) {
-		int[][] pixelArray = source.getPixelArray(); // puts all of the RGB pixel values into an array called Pixel Array
-		// Goes through the entire Pixel Array and determines if two times the maximum of the red and blue values is less
-		// than the green value. If it is, it sets the alpha value to 0, or makes the pixel transparent.
+		int[][] pixelArray = source.getPixelArray(); 
 		for (int r = 0; r < pixelArray.length; r++) {
 			for(int c = 0; c < pixelArray[0].length; c++) {
 				int pixel = pixelArray[r][c];
