@@ -96,7 +96,25 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 
 		return cumulativeHistogram;
 	}
-	
+
+	private void equalizeImage(int[][] array, int[] cumulativeHistogram) {
+		// Replace each luminosity value with 255 * cumulative histogram[L] / total #
+		// pixels
+		for (int row = 0; row < array.length; row++) {
+			for (int col = 0; col < array[0].length; col++) {
+				if (isPixelSelected(row, col)) {
+					int pixel = array[row][col];
+					int red = GImage.getRed(pixel);
+					int green = GImage.getGreen(pixel);
+					int blue = GImage.getBlue(pixel);
+					int luminosity = computeLuminosity(red, green, blue);
+
+					int newLuminosity = (int) (255 * cumulativeHistogram[luminosity] / numSelectedPixels());
+					array[row][col] = GImage.createRGBPixel(newLuminosity, newLuminosity, newLuminosity);
+				}
+			}
+		}
+	}
 	
 	public GImage negative(GImage source) {
 		int[][] pixelArray = source.getPixelArray();  
