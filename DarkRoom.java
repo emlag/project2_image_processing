@@ -172,9 +172,7 @@ public class DarkRoom extends GraphicsProgram {
 			remove(selectedArea);
 			selectedArea = null;
 			currentlySelecting = false;
-		} else {
-			showErrorPopup("Select an area to crop");
-		}
+		} 
 	}
 
 	public void mouseClicked(MouseEvent e) { 
