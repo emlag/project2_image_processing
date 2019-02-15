@@ -83,6 +83,21 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return histogram;
 	}
 
+	private int[] computeCumulativeHistogram(int[] histogram) {
+		int[] cumulativeHistogram = new int[histogram.length];
+
+		// Index i in the cumulative histogram is the number of pixels
+		// with AT MOST luminosity i.
+		int total = 0;
+		for (int i = 0; i < histogram.length; i++) {
+			total += histogram[i];
+			cumulativeHistogram[i] = total;
+		}
+
+		return cumulativeHistogram;
+	}
+	
+	
 	public GImage negative(GImage source) {
 		int[][] pixelArray = source.getPixelArray();  
 		for (int r = 0; r < pixelArray.length; r++) {
