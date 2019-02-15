@@ -57,7 +57,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 				int blueValue = GImage.getBlue(pixel);
 				int alphaValue = GImage.getAlpha(pixel);
 				int bigger = Math.max(redValue, blueValue);
-				if (greenValue > 2 * bigger) {
+				if (greenValue >= 2 * bigger) {
 					alphaValue = 0;
 				}
 				int newPixel = GImage.createRGBPixel(redValue, greenValue, blueValue, alphaValue);
