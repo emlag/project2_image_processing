@@ -57,10 +57,10 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		int[] histogram = computeHistogram(pixelArray);
 		int[] cumulativeHistogram = computeCumulativeHistogram(histogram);
 		equalizeImage(pixelArray, cumulativeHistogram);
-		
+
 		return new GImage(pixelArray);
 	}
-	
+
 	private int[] computeHistogram(int[][] pixels) {
 		int height = pixels.length;
 		int width = pixels[0].length;
@@ -70,15 +70,13 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		// Fill in the histogram using all the pixel's luminosities
 		for (int row = 0; row < height; row++) {
 			for (int col = 0; col < width; col++) {
-				if (isPixelSelected(row, col)) {
-					int pixel = pixels[row][col];
-					int red = GImage.getRed(pixel);
-					int green = GImage.getGreen(pixel);
-					int blue = GImage.getBlue(pixel);
-					int luminosity = computeLuminosity(red, green, blue);
+				int pixel = pixels[row][col];
+				int red = GImage.getRed(pixel);
+				int green = GImage.getGreen(pixel);
+				int blue = GImage.getBlue(pixel);
+				int luminosity = computeLuminosity(red, green, blue);
 
-					histogram[luminosity]++;
-				}
+				histogram[luminosity]++;
 			}
 		}
 
@@ -104,7 +102,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return image;
 	}
 
-	
+
 	public GImage crop(GImage source, int cropX, int cropY, int cropWidth, int cropHeight) {
 		int[][] pixelArray = source.getPixelArray();
 		int[][] croppedArray = new int[cropHeight][(int) cropWidth];
