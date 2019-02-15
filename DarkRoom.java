@@ -151,6 +151,45 @@ public class DarkRoom extends GraphicsProgram {
 		}
 	}
 
+	public void deselect() {
+		if (currentlySelecting) {
+			remove(selectedArea);
+			selectedArea = null;
+			currentlySelecting = false;
+		}
+	}
+
+	public void mouseClicked(MouseEvent e) { 
+		deselect(); 
+	}
+
+	public void mousePressed(MouseEvent e) {
+		deselect();
+		if (selectedArea == null) {
+			fixedX = e.getX();
+			fixedY = e.getY();
+
+			selectedArea = new GRect(fixedX, fixedY, 0, 0);
+			add(selectedArea);
+			currentlySelecting = true;
+		}
+	}
+
+	public void mouseDragged(MouseEvent e) { 
+		int x = e.getX();
+		int y = e.getY();
+
+		if (x <= currImage.getWidth() && y <= currImage.getHeight()) {
+			double newX = Math.min(fixedX, x);
+			double newY = Math.min(fixedY, y);
+
+			double width = Math.abs(x - fixedX);
+			double height = Math.abs(y - fixedY);
+
+			selectedArea.setBounds(newX, newY, width, height);
+		}
+	}
+	
 	// Returns whether or not the given coordinate is in the current image
 	private boolean inImageBounds(int x, int y) {
 		if (currentImage == null) {
