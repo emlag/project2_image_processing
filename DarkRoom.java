@@ -65,7 +65,7 @@ public class DarkRoom extends GraphicsProgram {
 	public void init() {
 		addButtons();
 		addActionListeners();
-		setTitle("CS 106A ImageShop");
+		setTitle("DarkRoom");
 		algorithms = new DarkRoomAlgorithms();
 	}
 	
@@ -85,7 +85,7 @@ public class DarkRoom extends GraphicsProgram {
 		add(new JButton("Green Screen"), WEST);
 		add(new JButton("Equalize"), WEST);
 
-		infoLabel = new JLabel("Welcome to CS 106A ImageShop!");
+		infoLabel = new JLabel("Welcome to DarkRoom!");
 		add(infoLabel, NORTH);
 
 		statsLabel = new JLabel(" ");
