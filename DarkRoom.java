@@ -226,7 +226,7 @@ public class DarkRoom extends GraphicsProgram {
 		while (true) {
 			try {
 				String result = JOptionPane.showInputDialog(prompt);
-				int num = Double.parseDouble(result);
+				double num = Double.parseDouble(result);
 				return num;
 			} catch (NumberFormatException e) {
 				// empty; re-prompt
