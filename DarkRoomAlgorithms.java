@@ -53,8 +53,12 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	}
 
 	public GImage equalize(GImage source) {
-		// TODO
-		return null;
+		int[][] pixelArray = currImage.getPixelArray();
+		int[] histogram = computeHistogram(pixelArray);
+		int[] cumulativeHistogram = computeCumulativeHistogram(histogram);
+		equalizeImage(pixelArray, cumulativeHistogram);
+		
+		return new GImage(pixelArray);
 	}
 
 	public GImage negative(GImage source) {
