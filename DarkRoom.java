@@ -145,6 +145,7 @@ public class DarkRoom extends GraphicsProgram {
 			}
 		} else if (command.equals("Scale")) {
 			double scaleFactor = readDouble("Enter the scale factor");
+			GImage newImage = algorithms.scale(currentImage, scaleFactor);
 			
 		} else {
 			infoLabel.setText("Unknown command " + command + ".");
