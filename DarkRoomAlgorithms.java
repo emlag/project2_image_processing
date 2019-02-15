@@ -13,20 +13,7 @@ import acm.graphics.*;
 
 public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 
-	public GImage flipHorizontal(GImage source) {
-		int[][] pixelArray = source.getPixelArray();
-		int width = pixelArray[0].length;
-		for (int col1 = 0; col1 < width/2; col1++) {
-			int col2 = width - col1 - 1;
-			for (int row = 0; row < pixelArray.length; row++) {
-				int temp = pixelArray[row][col1];
-				pixelArray[row][col1] = pixelArray[row][col2];
-				pixelArray[row][col2] = temp;
-			}
-		}
-		return new GImage(pixelArray);
-	}
-
+	
 	public GImage rotateLeft(GImage source) {
 		int[][] pixelArray = source.getPixelArray();
 		int height = pixelArray.length;
@@ -46,6 +33,21 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return rotateLeft(rotateLeft(rotateLeft(source)));
 	}
 
+	public GImage flipHorizontal(GImage source) {
+		int[][] pixelArray = source.getPixelArray();
+		int width = pixelArray[0].length;
+		for (int col1 = 0; col1 < width/2; col1++) {
+			int col2 = width - col1 - 1;
+			for (int row = 0; row < pixelArray.length; row++) {
+				int temp = pixelArray[row][col1];
+				pixelArray[row][col1] = pixelArray[row][col2];
+				pixelArray[row][col2] = temp;
+			}
+		}
+		return new GImage(pixelArray);
+	}
+
+	
 	public GImage greenScreen(GImage source) {
 		int[][] pixelArray = source.getPixelArray(); 
 		for (int r = 0; r < pixelArray.length; r++) {
