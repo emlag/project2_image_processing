@@ -89,7 +89,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	}
 
 	public GImage scale(GImage source, double scaleFactor) {
-		int[][] originalPixelArray = currImage.getPixelArray();
+		int[][] originalPixelArray = source.getPixelArray();
 		int height = originalPixelArray.length;
 		int width = originalPixelArray[0].length;
 		int newHeight = (int) (height * scaleFactor);
@@ -103,6 +103,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 				newPixelArray[r][c] = color;
 			}
 		}
-		currImage.setPixelArray(newPixelArray)
+		source.setPixelArray(newPixelArray);
 	}
 }
