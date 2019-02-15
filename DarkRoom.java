@@ -144,6 +144,7 @@ public class DarkRoom extends GraphicsProgram {
 				infoLabel.setText(command + " filter applied.");
 			}
 		} else if (command.equals("Scale")) {
+			double scaleFactor = readDouble("Enter the scale factor");
 			
 		} else {
 			infoLabel.setText("Unknown command " + command + ".");
