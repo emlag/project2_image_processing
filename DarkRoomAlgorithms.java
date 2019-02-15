@@ -92,8 +92,8 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		int[][] originalPixelArray = currImage.getPixelArray();
 		int height = originalPixelArray.length;
 		int width = originalPixelArray[0].length;
-		int newHeight = (int) (height * scaleNum);
-		int newWidth = (int) (width * scaleNum);
+		int newHeight = (int) (height * scaleFactor);
+		int newWidth = (int) (width * scaleFactor);
 		int[][] newPixelArray = new int[newHeight][newWidth];
 
 		for (int r = 0; r < newPixelArray.length; r++) {
