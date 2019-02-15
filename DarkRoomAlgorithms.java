@@ -15,15 +15,17 @@ import acm.graphics.*;
 public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 
 	public GImage flipHorizontal(GImage source) {
-            int[][] array = source.getPixelArray();
-            int width = array[0].length;
-            for col1 = 0 to width / 2:
-                col2 = width - col1 - 1.
-                for row = 0 to pixels.length:
-                     temp = array[row][col1].
-                     array[row][col1] = array[row][col2].
-                     array[row][col2] = temp.
-            return new GImage(array).
+		int[][] pixelArray = source.getPixelArray();
+		int width = pixelArray[0].length;
+		for (int col1 = 0; col1 < width/2; col1++) {
+			int col2 = width - col1 - 1;
+			for (int row = 0; row < pixelArray.length; row++) {
+				int temp = pixelArray[row][col1];
+				pixelArray[row][col1] = pixelArray[row][col2];
+				pixelArray[row][col2] = temp;
+			}
+		}
+		return new GImage(pixelArray);
 	}
 
 	public GImage rotateLeft(GImage source) {
