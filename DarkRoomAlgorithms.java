@@ -64,8 +64,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 				pixelArray[r][c] = newPixel;
 			}
 		}
-		return new GImage(pixelArray); // creates new GImage based on the RGB values of the changed Pixel Array.
-		return image;
+		return new GImage(pixelArray); 
 	}
 
 	public GImage equalize(GImage source) {
