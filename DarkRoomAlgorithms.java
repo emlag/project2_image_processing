@@ -80,12 +80,12 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	public GImage crop(GImage source, int cropX, int cropY, int cropWidth, int cropHeight) {
 		int[][] pixelArray = source.getPixelArray();
 		int[][] croppedArray = new int[cropHeight][(int) cropWidth];
-		for (int r = 0; r < croppedArray.getHeight(); r++) {
-			for (int c = 0; c < croppedArray.getWidth(); c++) {
+		for (int r = 0; r < croppedArray.length; r++) {
+			for (int c = 0; c < croppedArray[0].length; c++) {
 				croppedArray[r][c] = pixelArray[(r + cropX)][(c + cropY)];
 			}
 		}
-		currImage.setPixelArray(croppedArray);
+		return new GImage(croppedArray);
 	}
 
 	public GImage scale(GImage source, double scaleFactor) {
