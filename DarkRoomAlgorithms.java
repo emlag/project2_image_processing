@@ -82,7 +82,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		int[][] croppedArray = new int[cropHeight][(int) cropWidth];
 		for (int r = 0; r < croppedArray.getHeight(); r++) {
 			for (int c = 0; c < croppedArray.getWidth(); c++) {
-				croppedArray[r][c] = pixelArray[(int) (r + cropX)][(int) (c + cropY)];
+				croppedArray[r][c] = pixelArray[(r + cropX)][(c + cropY)];
 			}
 		}
 		currImage.setPixelArray(croppedArray);
