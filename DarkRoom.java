@@ -60,13 +60,13 @@ public class DarkRoom extends GraphicsProgram {
 	private GImage currentImage;
 
 	// The image algorithms object that runs the algorithms
-	private ImageShopAlgorithms algorithms;
+	private DarkRoomAlgorithms algorithms;
 
 	public void init() {
 		addButtons();
 		addActionListeners();
 		setTitle("CS 106A ImageShop");
-		algorithms = new ImageShopAlgorithms();
+		algorithms = new DarkRoomAlgorithms();
 	}
 	
 	// Add the interactors to the screen

@@ -12,7 +12,7 @@
 import java.util.*;
 import acm.graphics.*;
 
-public class ImageShopAlgorithms implements ImageShopAlgorithmsInterface {
+public class DarkRoomAlgorithms implements ImageShopAlgorithmsInterface {
 
 	public GImage flipHorizontal(GImage source) {
 		// TODO
