@@ -146,7 +146,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return image;
 	}
 
-
 	public GImage crop(GImage source, int cropX, int cropY, int cropWidth, int cropHeight) {
 		int[][] pixelArray = source.getPixelArray();
 		int[][] croppedArray = new int[cropHeight][(int) cropWidth];
