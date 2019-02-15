@@ -14,21 +14,11 @@ import acm.graphics.*;
 public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	
 	public GImage rotateLeft(GImage source) {
-		int[][] pixelArray = source.getPixelArray();
-		int height = pixelArray.length;
-		int width = pixelArray[0].length;
-
-		int[][] newImageArray = new int[width][height];
-		for (int row = 0; row < height; row++) {
-			for (int col = 0; col < width; col++) {
-				newImageArray[width - col - 1][row] = pixelArray[row][col];
-			}
-		}
-		return new GImage(newImageArray);
+		// TODO
+		return null;
 	}
 
 	public GImage rotateRight(GImage source) {
-		// TODO
 		return rotateLeft(rotateLeft(rotateLeft(source)));
 	}
 
