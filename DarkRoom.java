@@ -175,6 +175,7 @@ public class DarkRoom extends GraphicsProgram {
 			fixedY = e.getY();
 
 			selectedArea = new GRect(fixedX, fixedY, 0, 0);
+			selectedArea.setColor(Color.RED);
 			add(selectedArea);
 			currentlySelecting = true;
 		}
