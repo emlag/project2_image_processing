@@ -79,8 +79,8 @@ public class DarkRoom extends GraphicsProgram {
 		add(new JButton("Rotate Left"), WEST);
 		add(new JButton("Rotate Right"), WEST);
 		add(new JButton("Flip Horizontal"), WEST);
-//		add(new JButton("Translate"), WEST);
-//		add(new JButton("Blur"), WEST);
+		add(new JButton("Crop"), WEST);
+		add(new JButton("Scale"), WEST);
 		add(new JButton("Negative"), WEST);
 		add(new JButton("Green Screen"), WEST);
 		add(new JButton("Equalize"), WEST);
@@ -129,17 +129,8 @@ public class DarkRoom extends GraphicsProgram {
 			GImage newImage = algorithms.negative(currentImage);
 			setImage(newImage);
 			infoLabel.setText(command + " filter applied.");
-		} else if (command.equals("Translate")) {
-			int dx = readInteger("dx?");
-			int dy = readInteger("dy?");
-			GImage newImage = algorithms.translate(currentImage, dx, dy);
-			setImage(newImage);
-			infoLabel.setText(command + " filter applied.");
-		} else if (command.equals("Blur")) {
-			GImage newImage = algorithms.blur(currentImage);
-			setImage(newImage);
-			infoLabel.setText(command + " filter applied.");
-		} else {
+		} else if (command.equals(")) 
+		else {
 			infoLabel.setText("Unknown command " + command + ".");
 		}
 	}
