@@ -184,7 +184,7 @@ public class DarkRoom extends GraphicsProgram {
 		int x = e.getX();
 		int y = e.getY();
 
-		if (x <= currImage.getWidth() && y <= currImage.getHeight()) {
+		if (x <= currentImage.getWidth() && y <= currentImage.getHeight()) {
 			double newX = Math.min(fixedX, x);
 			double newY = Math.min(fixedY, y);
 
