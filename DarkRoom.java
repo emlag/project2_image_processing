@@ -29,7 +29,7 @@ import javax.swing.*;
 import stanford.cs106.diff.*;
 import stanford.cs106.gui.*;
 
-public class ImageShopProgram extends GraphicsProgram {
+public class DarkRoom extends GraphicsProgram {
 
 	/**********************************************************
 	 *                       Starter Code                     *
