@@ -99,6 +99,7 @@ public class DarkRoom extends GraphicsProgram {
 
 	// Respond to one of the buttons on the left side being clicked
 	public void actionPerformed(ActionEvent e) {
+		deselect();
 		String command = e.getActionCommand();
 		if (command.equals("Load Image")) {
 			loadImage();
