@@ -86,8 +86,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return new GImage(pixelArray); 
 	}
 
-	
-	
 	public GImage equalize(GImage source) {
 		int[][] pixelArray = source.getPixelArray();
 		int[] histogram = computeHistogram(pixelArray);
@@ -147,7 +145,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 			}
 		}
 	}
-	
 	
 
 	public GImage crop(GImage source, int cropX, int cropY, int cropWidth, int cropHeight) {
