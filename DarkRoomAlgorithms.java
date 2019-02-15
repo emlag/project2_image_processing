@@ -47,6 +47,25 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return new GImage(pixelArray);
 	}
 	
+	public GImage negative(GImage source) {
+		int[][] pixelArray = source.getPixelArray();  
+		for (int r = 0; r < pixelArray.length; r++) {
+			for(int c = 0; c < pixelArray[0].length; c++) {
+				int pixel = pixelArray[r][c];
+				int redValue = GImage.getRed(pixel);
+				int greenValue = GImage.getGreen(pixel);
+				int blueValue = GImage.getBlue(pixel);
+				int newRed = Math.abs(255 - redValue);
+				int newGreen = Math.abs(255 - greenValue);
+				int newBlue = Math.abs(255 - blueValue);
+				int newPixel = GImage.createRGBPixel(newRed, newGreen, newBlue);
+				pixelArray[r][c] = newPixel;
+			}
+		}
+		GImage image = new GImage(pixelArray); 
+		return image;
+	}
+	
 	public GImage greenScreen(GImage source) {
 		int[][] pixelArray = source.getPixelArray(); 
 		for (int r = 0; r < pixelArray.length; r++) {
@@ -67,24 +86,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return new GImage(pixelArray); 
 	}
 
-	public GImage negative(GImage source) {
-		int[][] pixelArray = source.getPixelArray();  
-		for (int r = 0; r < pixelArray.length; r++) {
-			for(int c = 0; c < pixelArray[0].length; c++) {
-				int pixel = pixelArray[r][c];
-				int redValue = GImage.getRed(pixel);
-				int greenValue = GImage.getGreen(pixel);
-				int blueValue = GImage.getBlue(pixel);
-				int newRed = Math.abs(255 - redValue);
-				int newGreen = Math.abs(255 - greenValue);
-				int newBlue = Math.abs(255 - blueValue);
-				int newPixel = GImage.createRGBPixel(newRed, newGreen, newBlue);
-				pixelArray[r][c] = newPixel;
-			}
-		}
-		GImage image = new GImage(pixelArray); 
-		return image;
-	}
+	
 	
 	public GImage equalize(GImage source) {
 		int[][] pixelArray = source.getPixelArray();
