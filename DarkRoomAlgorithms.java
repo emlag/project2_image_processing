@@ -58,9 +58,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	}
 
 	public GImage negative(GImage source) {
-		int[][] pixelArray = source.getPixelArray(); // puts all of the RGB pixel values into an array called Pixel Array
-		// Goes through the entire Pixel Array for the red, blue, and green values changes them by subtracting them from 
-		// 255 and taking the absolute value of them, to ultimate produce the negative. 
+		int[][] pixelArray = source.getPixelArray();  
 		for (int r = 0; r < pixelArray.length; r++) {
 			for(int c = 0; c < pixelArray[0].length; c++) {
 				int pixel = pixelArray[r][c];
