@@ -102,16 +102,14 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		// pixels
 		for (int row = 0; row < array.length; row++) {
 			for (int col = 0; col < array[0].length; col++) {
-				if (isPixelSelected(row, col)) {
 					int pixel = array[row][col];
 					int red = GImage.getRed(pixel);
 					int green = GImage.getGreen(pixel);
 					int blue = GImage.getBlue(pixel);
 					int luminosity = computeLuminosity(red, green, blue);
 
-					int newLuminosity = (int) (255 * cumulativeHistogram[luminosity] / numSelectedPixels());
+					int newLuminosity = (int) (255 * cumulativeHistogram[luminosity] / (array.length * array[0].length));
 					array[row][col] = GImage.createRGBPixel(newLuminosity, newLuminosity, newLuminosity);
-				}
 			}
 		}
 	}
