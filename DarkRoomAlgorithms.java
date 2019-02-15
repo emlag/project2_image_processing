@@ -44,7 +44,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 
 	public GImage rotateRight(GImage source) {
 		// TODO
-		return null;
+		return rotateLeft(rotateLeft(rotateLeft(source)));
 	}
 
 	public GImage greenScreen(GImage source) {
