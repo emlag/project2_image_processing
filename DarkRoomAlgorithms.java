@@ -46,7 +46,6 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		}
 		return new GImage(pixelArray);
 	}
-
 	
 	public GImage greenScreen(GImage source) {
 		int[][] pixelArray = source.getPixelArray(); 
