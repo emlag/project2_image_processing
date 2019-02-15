@@ -12,7 +12,6 @@
 import acm.graphics.*;
 
 public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
-
 	
 	public GImage rotateLeft(GImage source) {
 		int[][] pixelArray = source.getPixelArray();
