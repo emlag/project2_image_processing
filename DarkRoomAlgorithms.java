@@ -152,7 +152,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		int[][] croppedArray = new int[cropHeight][(int) cropWidth];
 		for (int r = 0; r < croppedArray.length; r++) {
 			for (int c = 0; c < croppedArray[0].length; c++) {
-				croppedArray[r][c] = pixelArray[(r + cropX)][(c + cropY)];
+				croppedArray[r][c] = pixelArray[(r + cropY)][(c + cropX)];
 			}
 		}
 		return new GImage(croppedArray);
