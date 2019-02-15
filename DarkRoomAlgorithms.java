@@ -29,8 +29,17 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 	}
 
 	public GImage rotateLeft(GImage source) {
-		// TODO
-		return null;
+		int[][] array = source.getPixelArray();
+		int height = array.length;
+		int width = array[0].length;
+
+		int[][] newImageArray = new int[width][height];
+		for (int row = 0; row < height; row++) {
+			for (int col = 0; col < width; col++) {
+				newImageArray[width - col - 1][row] = array[row][col];
+			}
+		}
+		return new GImage(array);
 	}
 
 	public GImage rotateRight(GImage source) {
