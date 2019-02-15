@@ -61,6 +61,11 @@ public class DarkRoom extends GraphicsProgram {
 
 	// The image algorithms object that runs the algorithms
 	private DarkRoomAlgorithms algorithms;
+	
+	protected GRect selectedArea;
+	private boolean currentlySelecting;
+	private double fixedX;
+	private double fixedY;
 
 	public void init() {
 		addButtons();
