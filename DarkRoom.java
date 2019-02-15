@@ -99,7 +99,6 @@ public class DarkRoom extends GraphicsProgram {
 
 	// Respond to one of the buttons on the left side being clicked
 	public void actionPerformed(ActionEvent e) {
-		deselect();
 		String command = e.getActionCommand();
 		if (command.equals("Load Image")) {
 			loadImage();
@@ -140,7 +139,7 @@ public class DarkRoom extends GraphicsProgram {
 				GImage newImage = algorithms.crop(currentImage, (int) selectedArea.getX(), 
 						   						  (int) selectedArea.getY(), (int) selectedArea.getWidth(), 
 						   						  (int) selectedArea.getHeight());
-				deselect();
+				
 				setImage(newImage);
 				infoLabel.setText(command + " filter applied.");
 			}
@@ -151,6 +150,7 @@ public class DarkRoom extends GraphicsProgram {
 		} else {
 			infoLabel.setText("Unknown command " + command + ".");
 		}
+		deselect();
 	}
 
 	// When the mouse moves in the image, update the info label at the bottom
