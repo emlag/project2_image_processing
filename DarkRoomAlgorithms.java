@@ -76,6 +76,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return image;
 	}
 
+	
 	public GImage crop(GImage source, int cropX, int cropY, int cropWidth, int cropHeight) {
 		// TODO
 		return null;
