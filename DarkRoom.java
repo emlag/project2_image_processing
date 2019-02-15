@@ -135,7 +135,9 @@ public class DarkRoom extends GraphicsProgram {
 			setImage(newImage);
 			infoLabel.setText(command + " filter applied.");
 		} else if (command.equals("Crop")) {
-			// TODO
+			if (currentlySelecting) {
+				GImage newImage = algorithms.crop(currentImage, selectedArea.getX(), selectedArea.getY(), selectedArea.getWidth(), selectedArea.getHeight());
+			}
 		} else if (command.equals("Scale")) {
 			// TODO
 		} else {
