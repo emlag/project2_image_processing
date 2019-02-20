@@ -34,9 +34,9 @@ public class DarkRoom extends GraphicsProgram {
 	/**********************************************************
 	 *                       Starter Code                     *
 	 *                      --------------                    *
-	 * This code is provided with Image Shop. This particular *
+	 * This code is provided with DarkRoom. This particular   *
 	 * file add all the buttons and strings up the program to *
-	 * call your ImageShopAlgorithm methods                   * 
+	 * call your DarkRoomAlgorithm methods                    * 
 	 *   
 	 * You don't need to read, nor understand this file,      *
 	 * though you are more than welcome to peruse it. You     *
@@ -216,24 +216,6 @@ public class DarkRoom extends GraphicsProgram {
 			double height = currentImage.getHeight();
 			double width = height <= 0 ? 0 : currentImage.getWidth();
 			return x >= 0 && x < width && y >= 0 && y < height;
-		}
-	}
-
-	/*
-	 * Pops up dialog boxes asking the user to type an integer repeatedly until
-	 * the user types a valid integer.
-	 */
-	private double readDoubleFromUser(String prompt) {
-		while (true) {
-			try {
-				String result = JOptionPane.showInputDialog(prompt);
-				double num = Double.parseDouble(result);
-				return num;
-			} catch (NumberFormatException e) {
-				// empty; re-prompt
-			} catch (NullPointerException e) {
-				// empty; re-prompt
-			}
 		}
 	}
 
