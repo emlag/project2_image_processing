@@ -38,7 +38,7 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return null;
 	}
 
-	public GImage blur(GImage source, double scaleFactor) {
+	public GImage blur(GImage source) {
 		// TODO
 		return null;
 	}
