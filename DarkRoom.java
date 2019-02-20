@@ -85,7 +85,7 @@ public class DarkRoom extends GraphicsProgram {
 		add(new JButton("Rotate Right"), WEST);
 		add(new JButton("Flip Horizontal"), WEST);
 		add(new JButton("Crop"), WEST);
-		add(new JButton("Scale"), WEST);
+		add(new JButton("Blur"), WEST);
 		add(new JButton("Negative"), WEST);
 		add(new JButton("Green Screen"), WEST);
 		add(new JButton("Equalize"), WEST);
