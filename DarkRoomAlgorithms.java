@@ -38,7 +38,8 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return null;
 	}
 
-	public GImage equalize(GImage source) {
+	
+	public GImage blur(GImage source, double scaleFactor) {
 		// TODO
 		return null;
 	}
@@ -49,7 +50,9 @@ public class DarkRoomAlgorithms implements DarkRoomAlgorithmsInterface {
 		return null;
 	}
 
-	public GImage scale(GImage source, double scaleFactor) {
+	
+	
+	public GImage equalize(GImage source) {
 		// TODO
 		return null;
 	}
